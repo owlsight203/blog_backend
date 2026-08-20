@@ -1,0 +1,39 @@
+body{
+    background-color: #006A4E;
+}
+
+.card-title{
+    font-weight: 900;
+    color: red;
+}
+.desc-text{
+    font-weight: 500;
+}
+.title-detail{
+    font-size: 2em;
+}
+.dated-text{
+    font-weight: 300;
+    color: #8F9779;
+}
+.fixed-size-image{
+    height: 500px;
+    width: 800px;
+    object-fit: cover;
+    margin:auto;
+    display:block;
+
+}
+.text-muted{
+    color: black;
+}
+.desc-about{
+    color:white;
+}
+.nav-item:hover {
+    color: orange !important;
+}
+.img-profile{
+    display:flex;
+}
+  
