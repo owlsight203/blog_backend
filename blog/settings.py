@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@!y@@pp7!32tzai=do_*%@3nkd2hv5d0)&rw3u@4=qb=4qim&r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.36','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['192.168.1.36','localhost','127.0.0.1','.vercel.app']
 
 
 # Application definition
@@ -130,3 +130,5 @@ MEDIA_URL='/pictures/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
