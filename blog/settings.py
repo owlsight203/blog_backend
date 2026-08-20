@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-@!y@@pp7!32tzai=do_*%@3nkd2hv5d0)&rw3u@4=qb=4qim&r
 DEBUG = True
 
 # Cho phép tất cả subdomain của vercel.app và localhost
-ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
