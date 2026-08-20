@@ -1,0 +1,29 @@
+{% extends 'posts/base.html' %}
+{% block content %}
+<div class="text-card text-white">Đây là những hình ảnh AI do mình làm ra từ Stable-Diffusion (cho vui...😜😜😜)</div>
+</br>
+    <div class="container" style="background-color:#eec0c8">
+        <div class="row justify-content-center align-item-center">
+            
+                {% for pic in pic_lists%}
+                <div class="card">
+                    <div class="card-body text-center" style="background-color:#FFFFE0">
+                    
+                        <img src="{{pic.img_AI}}"class="card-img-top"> 
+                        <div class="card-text desc-text">
+                            <p>{{ pic.description|safe| truncatechars:100 }}</p>
+                        </div>
+                        <div class="card-text dated-text">
+                            Date created: {{ pic.created_at }}
+                        </div>
+                        <div class="card-text dated-text">
+                            Date updated: {{ pic.updated_at }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

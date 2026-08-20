@@ -1,0 +1,22 @@
+{% extends 'posts/base.html' %}
+{% block content %}
+
+<div class="container" style="background-color:#FFFFE0; min-height:100vh">
+    <div class="row justify-content-center align-item-center">
+        <div class="col">
+            <img src="{{post_object.img_thumbnail}}" class="fixed-size-image img-fluid">
+            <div class="card-title title-detail text-center">{{post_object.title}}</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="card-text">{{post_object.description|safe}}</div>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="card-text">
+    {% for tag in post_object.tag.all%}
+        <div class="card-text text-info"># {{tag.name}}</div>
+    {% endfor %}
+</div>
+<div class="card-text dated-text">Updated at: {{post_object.updated_at}}</div>
+{% endblock %}

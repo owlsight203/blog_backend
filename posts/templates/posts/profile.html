@@ -1,0 +1,21 @@
+{% extends "posts/base.html" %}
+{% block content %}
+{% if anonymous %}
+    <div>
+        <img src="\pictures\profilepictureAI\964716.png"style="width:75%;height: 300px;position:absolute;">
+    </div>
+    <div style="display:flex;">
+        <img style="width:100px;height:100px; object-fit: cover; border-radius:50%;position: relative;" src="{{user.profile.image.url}}">
+        <h3 style="color:white;padding:30px;position: relative;"">{{user.username}}</h3>
+    </div>
+</br></br>
+    <div class="card-text desc-about">{{user.profile.description|safe}}</div>
+{% else %}
+    <h3 style="color:white">{{user.username}}</h3>
+    <img style="width:100px;height:100px; object-fit: cover; border-radius:50%" src="{{user.profile.image.url}}">
+</br></br>
+<div class="card-body">
+    <div class="card-text desc-about card-img-top img-fluid">{{user.profile.description|safe}}</div>
+</div>
+{% endif %}
+{% endblock %}
