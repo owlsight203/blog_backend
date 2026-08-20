@@ -1,2 +1,2 @@
-import pym5ql 
+import pymysql
 pymysql.install_as_MySQLdb()
