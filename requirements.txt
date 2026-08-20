@@ -6,7 +6,9 @@ django-ckeditor==6.7.2
 django-js-asset==3.0.1
 djangorestframework==3.17.1
 idna==3.18
+mysqlclient==2.2.8
 pillow==11.1.0
+python-dotenv==1.2.3
 requests==2.34.2
 sqlparse==0.5.3
 typing_extensions==4.12.2
