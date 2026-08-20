@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-@!y@@pp7!32tzai=do_*%@3nkd2hv5d0)&rw3u@4=qb=4qim&r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.36','localhost','127.0.0.1','.vercel.app']
+ALLOWED_HOSTS = ['192.168.1.36','localhost','127.0.0.1','.vercel']
 
 
 # Application definition
@@ -91,11 +91,16 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT'),
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+        'OPTIONS': {
+            'ssl': {
+                'ssl_mode': 'REQUIRED'
+            }
+        },
     }
 }
 
